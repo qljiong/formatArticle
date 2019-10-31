@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>自动排版工具</title>
+</head>
+<body>
+    <div class="aw-container-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="aw-content-wrap clearfix">
+                    <div class=" aw-main-content" style="min-height:700px;max-height:2000px">
+                        <div style="clear:both"></div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">自动排版工具</h4>
+                                    </div>
+                                </div>
+                                <script src="./static/edit.js"></script>
+                            </div>
+                            <div class="panel-body">
+                                <div>
+                                    <div class="linedwrap">
+                                        <textarea id="thebody" name="json_input" class="json_input"
+                                            style="height: 360px; font-size: 11px !important; resize: both; width: 1078px; max-width: 1070px;"
+                                            rows="32" spellcheck="false" placeholder="请输入要处理的字符串"></textarea>
+                                    </div>
+                                </div>
+                                <div class="validateButtons clear">
+                                    <div class="left" style="float: left">
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <input class="btn btn-primary" title="清除HTML" onclick="formatjs()"
+                                                value="清除HTML" type="button" name="body">
+                                            <input title="系统自动排版" onclick="format()" value="自动排版" type="button"
+                                                name="body" class="btn btn-primary">
+                                            <!--<input class="button" title="仅用于删除文章内多余空行及空格" onclick=format2() value="消除空行" type="button" name="body1" class="btn btn-primary" />-->
+                                            <input title="删除段落文字里的换行" onclick="clearSectionNewline()" value="清除段落内换行" type="button" name="bodynewline" class="btn btn-primary">
+
+                                            <input title="自动段间空行自动排版" onclick="format3()" value="添加空行" type="button"
+                                                name="body3" class="btn btn-primary">
+                                            <input title="替换英文标点符号" onclick="format4()" value="替换标点" type="button"
+                                                name="chang" class="btn btn-primary">
+                                            <input title="检查错别字" onclick="CheckWords()" value="检查错别字" type="button"
+                                                name="errword" class="btn btn-primary">
+                                            <input id="buttonj2f" title="简繁转换" onclick="j2f()" value="简->繁"
+                                                type="button" name="jachang" class="btn btn-primary">
+                                            <input title="统计输入汉字数" onclick="chklen()" value="统计字数" type="button"
+                                                name="len" class="btn btn-primary">
+                                            <button type="button" class="btn btn-danger"
+                                                onclick="clearTxt()">清空结果</button>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="wrap" id="page"></div>
+                            </div>
+                            <div class="panel-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
